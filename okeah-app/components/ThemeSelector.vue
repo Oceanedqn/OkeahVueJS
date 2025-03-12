@@ -6,9 +6,8 @@
         </button>
 
         <!-- Modal d'options de thèmes -->
-        <div v-if="isModalOpen" class="fixed inset-0 bg-gray-500 bg-opacity-50 flex justify-center items-center z-50">
-            <!-- Contenu du modal -->
-            <div class="bg-white p-6 rounded-lg relative z-60 w-11/12 sm:w-1/2 md:w-1/3 lg:w-1/4">
+        <div v-if="isModalOpen" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+            <div class="bg-white p-6 rounded-lg relative z-50 w-11/12 sm:w-1/2 md:w-1/3 lg:w-1/4">
                 <!-- Icône de fermeture en haut à droite -->
                 <button @click="closeModal" class="absolute top-2 right-3 text-2xl text-gray-600 hover:text-primary">
                     <i class="fas fa-times cursor-pointer"></i>
