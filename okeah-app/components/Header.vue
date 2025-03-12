@@ -1,14 +1,14 @@
 <template>
-    <header :style="{ backgroundColor: `var(--background-alternatif)` }" class="text-white p-4 shadow-md">
+    <header class="bg-background-alternatif text-white p-4 shadow-md">
         <div class="flex w-full justify-between items-center">
             <!-- Texte Okeah à gauche -->
-            <div class="text-xl font-bold" :style="{ color: 'var(--primary)' }">Okeah</div>
+            <div class="text-xl font-bold text-primary">Okeah</div>
 
             <!-- Liens de navigation à droite -->
-            <nav class="flex space-x-4 items-center">
+            <nav class="flex space-x-4 items-center text-primary">
                 <NuxtLink to="/">Accueil</NuxtLink>
                 <NuxtLink to="/blog">Blog</NuxtLink>
-                <ThemeSelector />
+                <ThemeSwitcher />
             </nav>
         </div>
     </header>
@@ -18,8 +18,7 @@
 export default {
     data() {
         return {
-            // Choisis ton thème ici, exemple vintage-theme
-            themeClass: 'vintage-theme', // Utilise la classe de ton thème préféré
+            themeClass: 'vintage-theme',
         };
     },
     mounted() {
@@ -27,7 +26,6 @@ export default {
         document.body.classList.add(this.themeClass);
     },
     beforeDestroy() {
-        // Enlève la classe du thème lorsque le composant est détruit
         document.body.classList.remove(this.themeClass);
     }
 };

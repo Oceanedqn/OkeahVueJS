@@ -1,277 +1,146 @@
-/* Définir des variables CSS pour chaque thème */
-:root {
-  --background: #f4ddb3;
-  --background-alternatif: #ede6f2;
-  --background-light: #ffffff;
-  --text: #555;
-  --dark-text: #555;
-  --title-text: #000009;
-  --primary: #1f6e8c;
-  --primary-light: #2e8a97;
-  --primary-dark: #0d2a54;
-  --secondary: #ea703d;
-  --secondary-light: #eda76b;
-  --secondary-dark: #d83c25;
+@import "tailwindcss";
+
+@theme {
+  --color-background: #f4ddb3;
+  --color-background-alternatif: #ede6f2;
+  --color-background-light: #ffffff;
+  --color-text: #555;
+  --color-dark-text: #555;
+  --color-title-text: #000009;
+  --color-primary: #1f6e8c;
+  --color-primary-light: #2e8a97;
+  --color-primary-dark: #0d2a54;
+  --color-secondary: #ea703d;
+  --color-secondary-light: #eda76b;
+  --color-secondary-dark: #d83c25;
 }
 
-/* Thème vintage */
-.vintage-theme {
-  --background: #f4ddb3;
-  --background-alternatif: #ede6f2;
-  --background-light: #ffffff;
-  --text: #555;
-  --dark-text: #555;
-  --title-text: #000009;
-  --primary: #1f6e8c;
-  --primary-light: #2e8a97;
-  --primary-dark: #0d2a54;
-  --secondary: #ea703d;
-  --secondary-light: #eda76b;
-  --secondary-dark: #d83c25;
+@layer base {
+  [data-theme="vintage-theme"] {
+    --color-background: #f4ddb3;
+    --color-background-alternatif: #ede6f2;
+    --color-background-light: #ffffff;
+    --color-text: #555;
+    --color-dark-text: #555;
+    --color-title-text: #000009;
+    --color-primary: #1f6e8c;
+    --color-primary-light: #2e8a97;
+    --color-primary-dark: #0d2a54;
+    --color-secondary: #ea703d;
+    --color-secondary-light: #eda76b;
+    --color-secondary-dark: #d83c25;
+  }
+
+  [data-theme="plexiglas-orange-theme"] {
+    --color-background: #f5f2e7;
+    --color-background-alternatif: #fce3c5;
+    --color-background-light: #ffffff;
+    --color-text: #1c1c1c;
+    --color-dark-text: #1c1c1c;
+    --color-title-text: #1c1c1c;
+    --color-primary: #ff8c42;
+    --color-primary-light: #ffa659;
+    --color-primary-dark: #b35729;
+    --color-secondary: #ffd700;
+    --color-secondary-light: #ffe670;
+    --color-secondary-dark: #cc9c00;
+  }
+
+  [data-theme="cute-theme"] {
+    --color-background: #e6eafc; /* Beige doux */
+    --color-background-alternatif: #ede6f2; /* Gris lavande */
+    --color-background-light: #ffffff; /* Blanc */
+
+    --color-text: #555; /* Gris foncé */
+    --color-dark-text: #444; /* Texte plus foncé */
+    --color-title-text: #000009; /* Presque noir */
+
+    --color-primary: #aab9ff; /* Bleu pastel */
+    --color-primary-light: #c2caff; /* Bleu plus clair */
+    --color-primary-dark: #8899ff; /* Bleu plus foncé */
+
+    --color-secondary: #f9a8d4; /* Rose pastel */
+    --color-secondary-light: #fcc2e1; /* Rose plus clair */
+    --color-secondary-dark: #d17a9f; /* Rose plus foncé */
+  }
+
+  [data-theme="futurist-theme"] {
+    --color-background: #1b1b2f;
+    --color-background-alternatif: #2c2c54;
+    --color-background-light: #ffffff;
+    --color-text: #ededed;
+    --color-dark-text: #1c1c1c;
+    --color-title-text: #f7f9f9;
+    --color-primary: #ad00ff;
+    --color-primary-light: #cf3fff;
+    --color-primary-dark: #7500b8;
+    --color-secondary: #0affef;
+    --color-secondary-light: #5cffe6;
+    --color-secondary-dark: #008f95;
+  }
+
+  [data-theme="christmas-theme"] {
+    --color-background: #dff0e7;
+    --color-background-alternatif: #f8e2e2;
+    --color-background-light: #ffffff;
+    --color-text: #4a4a4a;
+    --color-dark-text: #4a4a4a;
+    --color-title-text: #8b0000;
+    --color-primary: #d32f2f;
+    --color-primary-light: #ff6659;
+    --color-primary-dark: #9a0007;
+    --color-secondary: #388e3c;
+    --color-secondary-light: #66bb6a;
+    --color-secondary-dark: #005005;
+  }
+
+  [data-theme="animal-crossing-theme"] {
+    --color-background: #e9f5e1;
+    --color-background-alternatif: #fdeac3;
+    --color-background-light: #ffffff;
+    --color-text: #4f4f4f;
+    --color-dark-text: #4f4f4f;
+    --color-title-text: #006b3c;
+    --color-primary: #6a994e;
+    --color-primary-light: #a7c957;
+    --color-primary-dark: #386641;
+    --color-secondary: #ffb703;
+    --color-secondary-light: #ffd166;
+    --color-secondary-dark: #cb9400;
+  }
+
+  [data-theme="candy-theme"] {
+    --color-background: #ffb6c1;
+    --color-background-alternatif: #ffd700;
+    --color-background-light: #fff5e1;
+    --color-text: #4b0082;
+    --color-dark-text: #4b0082;
+    --color-title-text: #ff6347;
+    --color-primary: #32cd32;
+    --color-primary-light: #98fb98;
+    --color-primary-dark: #228b22;
+    --color-secondary: #ff69b4;
+    --color-secondary-light: #ffb3d9;
+    --color-secondary-dark: #c71585;
+  }
+
+  [data-theme="sixties-theme"] {
+    --color-background: #fdeb0d;
+    --color-background-alternatif: #f8b500;
+    --color-background-light: #ffffff;
+    --color-text: #5c5c5c;
+    --color-dark-text: #5c5c5c;
+    --color-title-text: #4d2800;
+    --color-primary: #ff4500;
+    --color-primary-light: #ffa07a;
+    --color-primary-dark: #c41e3a;
+    --color-secondary: #7cfc00;
+    --color-secondary-light: #adff2f;
+    --color-secondary-dark: #228b22;
+  }
 }
 
-/* Thème Plexiglas Orange */
-.plexiglas-orange-theme {
-  --background: #f5f2e7;
-  --background-alternatif: #fce3c5;
-  --background-light: #ffffff;
-  --text: #1c1c1c;
-  --dark-text: #1c1c1c;
-  --title-text: #1c1c1c;
-  --primary: #ff8c42;
-  --primary-light: #ffa659;
-  --primary-dark: #b35729;
-  --secondary: #ffd700;
-  --secondary-light: #ffe670;
-  --secondary-dark: #cc9c00;
-}
-
-/* Thème futuriste */
-.futurist-theme {
-  --background: #1b1b2f;
-  --background-alternatif: #2c2c54;
-  --background-light: #ffffff;
-  --text: #ededed;
-  --dark-text: #1c1c1c;
-  --title-text: #f7f9f9;
-  --primary: #ad00ff;
-  --primary-light: #cf3fff;
-  --primary-dark: #7500b8;
-  --secondary: #0affef;
-  --secondary-light: #5cffe6;
-  --secondary-dark: #008f95;
-}
-
-/* Thème de Noël */
-.christmas-theme {
-  --background: #dff0e7;
-  --background-alternatif: #f8e2e2;
-  --background-light: #ffffff;
-  --text: #4a4a4a;
-  --dark-text: #4a4a4a;
-  --title-text: #8b0000;
-  --primary: #d32f2f;
-  --primary-light: #ff6659;
-  --primary-dark: #9a0007;
-  --secondary: #388e3c;
-  --secondary-light: #66bb6a;
-  --secondary-dark: #005005;
-}
-
-/* Thème Animal Crossing */
-.animal-crossing-theme {
-  --background: #e9f5e1;
-  --background-alternatif: #fdeac3;
-  --background-light: #ffffff;
-  --text: #4f4f4f;
-  --dark-text: #4f4f4f;
-  --title-text: #006b3c;
-  --primary: #6a994e;
-  --primary-light: #a7c957;
-  --primary-dark: #386641;
-  --secondary: #ffb703;
-  --secondary-light: #ffd166;
-  --secondary-dark: #cb9400;
-}
-
-/* Thème bonbon */
-.candy-theme {
-  --background: #ffb6c1;
-  --background-alternatif: #ffd700;
-  --background-light: #fff5e1;
-  --text: #4b0082;
-  --dark-text: #4b0082;
-  --title-text: #ff6347;
-  --primary: #32cd32;
-  --primary-light: #98fb98;
-  --primary-dark: #228b22;
-  --secondary: #ff69b4;
-  --secondary-light: #ffb3d9;
-  --secondary-dark: #c71585;
-}
-
-/* Thème années 60 */
-.sixties-theme {
-  --background: #fdeb0d;
-  --background-alternatif: #f8b500;
-  --background-light: #ffffff;
-  --text: #5c5c5c;
-  --dark-text: #5c5c5c;
-  --title-text: #4d2800;
-  --primary: #ff4500;
-  --primary-light: #ffa07a;
-  --primary-dark: #c41e3a;
-  --secondary: #7cfc00;
-  --secondary-light: #adff2f;
-  --secondary-dark: #228b22;
-}
-
-/* Appliquer les couleurs à l'élément body */
 body {
-  background-color: var(--background);
-  color: var(--text);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--title-text);
-}
-
-a {
-  color: var(--primary);
-}
-
-/** ----------- Pour utiliser le theme en version gratuit ----------- */
-
-/* Arrière-plans */
-.bg-background {
-  background-color: var(--background);
-}
-
-.bg-background-alternatif {
-  background-color: var(--background-alternatif);
-}
-
-.bg-background-light {
-  background-color: var(--background-light);
-}
-
-.bg-primary {
-  background-color: var(--primary);
-  color: white;
-}
-
-.bg-primary:hover {
-  background-color: var(--primary-light) !important;
-}
-
-/* Couleurs de texte */
-.text-background {
-  color: var(--background);
-}
-
-.text-background-alternatif {
-  color: var(--background-alternatif);
-}
-
-.text-background-light {
-  color: var(--background-light);
-}
-
-.text-text {
-  color: var(--text);
-}
-
-.text-dark-text {
-  color: var(--dark-text);
-}
-
-.text-title-text {
-  color: var(--title-text);
-}
-
-.text-primary {
-  color: var(--primary);
-}
-
-.hover\:text-primary-light:hover {
-  color: var(--primary-light);
-}
-
-.text-primary-light {
-  color: var(--primary-light);
-}
-
-.text-primary-dark {
-  color: var(--primary-dark);
-}
-
-.text-secondary {
-  color: var(--secondary);
-}
-
-.text-secondary-light {
-  color: var(--secondary-light);
-}
-
-.hover\:text-secondary-light:hover {
-  color: var(--secondary-light);
-}
-
-.text-secondary-dark {
-  color: var(--secondary-dark);
-}
-
-/* Bordures */
-.border-primary {
-  border-color: var(--primary);
-}
-
-.border-primary-light {
-  border-color: var(--primary-light);
-}
-
-.border-primary-dark {
-  border-color: var(--primary-dark);
-}
-
-.border-secondary {
-  border-color: var(--secondary);
-}
-
-.border-secondary-light {
-  border-color: var(--secondary-light);
-}
-
-.border-secondary-dark {
-  border-color: var(--secondary-dark);
-}
-
-/* Arrière-plans de type hover */
-.bg-primary:hover {
-  background-color: var(--primary);
-}
-
-.bg-primary-light:hover {
-  background-color: var(--primary-light);
-}
-
-.bg-primary-dark:hover {
-  background-color: var(--primary-dark);
-}
-
-.bg-secondary:hover {
-  background-color: var(--secondary);
-}
-
-.bg-secondary-light:hover {
-  background-color: var(--secondary-light);
-}
-
-.bg-secondary-dark:hover {
-  background-color: var(--secondary-dark);
+  background-color: var(--color-background);
+  color: var(--color-color-text);
 }
