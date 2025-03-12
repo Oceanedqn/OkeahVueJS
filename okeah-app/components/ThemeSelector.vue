@@ -6,8 +6,8 @@
         </button>
 
         <!-- Modal d'options de thèmes -->
-        <div v-if="isModalOpen" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-            <div class="bg-white p-6 rounded-lg relative z-50 w-11/12 sm:w-1/2 md:w-1/3 lg:w-1/4">
+        <div v-if="isModalOpen" class="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
+            <div class="bg-white p-6 rounded-lg relative  z-50 w-11/12 sm:w-1/2 md:w-1/3 lg:w-1/4">
                 <!-- Icône de fermeture en haut à droite -->
                 <button @click="closeModal" class="absolute top-2 right-3 text-2xl text-gray-600 hover:text-primary">
                     <i class="fas fa-times cursor-pointer"></i>
@@ -84,25 +84,3 @@ onMounted(() => {
     }
 });
 </script>
-
-<style scoped>
-/* Ajoute du z-index pour s'assurer que le fond et le modal apparaissent correctement */
-
-.fixed {
-    z-index: 50;
-    /* Fond semi-transparent */
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Ajout d'une couleur avec transparence */
-}
-
-.relative {
-    z-index: 60;
-    /* Contenu du modal */
-}
-
-/* Correction : Fond du modal avec opacité */
-.bg-white {
-    background-color: white;
-    /* Ou bien un fond semi-transparent si tu préfères */
-}
-</style>
