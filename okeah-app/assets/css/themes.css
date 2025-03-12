@@ -1,0 +1,277 @@
+/* Définir des variables CSS pour chaque thème */
+:root {
+  --background: #f4ddb3;
+  --background-alternatif: #ede6f2;
+  --background-light: #ffffff;
+  --text: #555;
+  --dark-text: #555;
+  --title-text: #000009;
+  --primary: #1f6e8c;
+  --primary-light: #2e8a97;
+  --primary-dark: #0d2a54;
+  --secondary: #ea703d;
+  --secondary-light: #eda76b;
+  --secondary-dark: #d83c25;
+}
+
+/* Thème vintage */
+.vintage-theme {
+  --background: #f4ddb3;
+  --background-alternatif: #ede6f2;
+  --background-light: #ffffff;
+  --text: #555;
+  --dark-text: #555;
+  --title-text: #000009;
+  --primary: #1f6e8c;
+  --primary-light: #2e8a97;
+  --primary-dark: #0d2a54;
+  --secondary: #ea703d;
+  --secondary-light: #eda76b;
+  --secondary-dark: #d83c25;
+}
+
+/* Thème Plexiglas Orange */
+.plexiglas-orange-theme {
+  --background: #f5f2e7;
+  --background-alternatif: #fce3c5;
+  --background-light: #ffffff;
+  --text: #1c1c1c;
+  --dark-text: #1c1c1c;
+  --title-text: #1c1c1c;
+  --primary: #ff8c42;
+  --primary-light: #ffa659;
+  --primary-dark: #b35729;
+  --secondary: #ffd700;
+  --secondary-light: #ffe670;
+  --secondary-dark: #cc9c00;
+}
+
+/* Thème futuriste */
+.futurist-theme {
+  --background: #1b1b2f;
+  --background-alternatif: #2c2c54;
+  --background-light: #ffffff;
+  --text: #ededed;
+  --dark-text: #1c1c1c;
+  --title-text: #f7f9f9;
+  --primary: #ad00ff;
+  --primary-light: #cf3fff;
+  --primary-dark: #7500b8;
+  --secondary: #0affef;
+  --secondary-light: #5cffe6;
+  --secondary-dark: #008f95;
+}
+
+/* Thème de Noël */
+.christmas-theme {
+  --background: #dff0e7;
+  --background-alternatif: #f8e2e2;
+  --background-light: #ffffff;
+  --text: #4a4a4a;
+  --dark-text: #4a4a4a;
+  --title-text: #8b0000;
+  --primary: #d32f2f;
+  --primary-light: #ff6659;
+  --primary-dark: #9a0007;
+  --secondary: #388e3c;
+  --secondary-light: #66bb6a;
+  --secondary-dark: #005005;
+}
+
+/* Thème Animal Crossing */
+.animal-crossing-theme {
+  --background: #e9f5e1;
+  --background-alternatif: #fdeac3;
+  --background-light: #ffffff;
+  --text: #4f4f4f;
+  --dark-text: #4f4f4f;
+  --title-text: #006b3c;
+  --primary: #6a994e;
+  --primary-light: #a7c957;
+  --primary-dark: #386641;
+  --secondary: #ffb703;
+  --secondary-light: #ffd166;
+  --secondary-dark: #cb9400;
+}
+
+/* Thème bonbon */
+.candy-theme {
+  --background: #ffb6c1;
+  --background-alternatif: #ffd700;
+  --background-light: #fff5e1;
+  --text: #4b0082;
+  --dark-text: #4b0082;
+  --title-text: #ff6347;
+  --primary: #32cd32;
+  --primary-light: #98fb98;
+  --primary-dark: #228b22;
+  --secondary: #ff69b4;
+  --secondary-light: #ffb3d9;
+  --secondary-dark: #c71585;
+}
+
+/* Thème années 60 */
+.sixties-theme {
+  --background: #fdeb0d;
+  --background-alternatif: #f8b500;
+  --background-light: #ffffff;
+  --text: #5c5c5c;
+  --dark-text: #5c5c5c;
+  --title-text: #4d2800;
+  --primary: #ff4500;
+  --primary-light: #ffa07a;
+  --primary-dark: #c41e3a;
+  --secondary: #7cfc00;
+  --secondary-light: #adff2f;
+  --secondary-dark: #228b22;
+}
+
+/* Appliquer les couleurs à l'élément body */
+body {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--title-text);
+}
+
+a {
+  color: var(--primary);
+}
+
+/** ----------- Pour utiliser le theme en version gratuit ----------- */
+
+/* Arrière-plans */
+.bg-background {
+  background-color: var(--background);
+}
+
+.bg-background-alternatif {
+  background-color: var(--background-alternatif);
+}
+
+.bg-background-light {
+  background-color: var(--background-light);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.bg-primary:hover {
+  background-color: var(--primary-light) !important;
+}
+
+/* Couleurs de texte */
+.text-background {
+  color: var(--background);
+}
+
+.text-background-alternatif {
+  color: var(--background-alternatif);
+}
+
+.text-background-light {
+  color: var(--background-light);
+}
+
+.text-text {
+  color: var(--text);
+}
+
+.text-dark-text {
+  color: var(--dark-text);
+}
+
+.text-title-text {
+  color: var(--title-text);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.hover\:text-primary-light:hover {
+  color: var(--primary-light);
+}
+
+.text-primary-light {
+  color: var(--primary-light);
+}
+
+.text-primary-dark {
+  color: var(--primary-dark);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+.text-secondary-light {
+  color: var(--secondary-light);
+}
+
+.hover\:text-secondary-light:hover {
+  color: var(--secondary-light);
+}
+
+.text-secondary-dark {
+  color: var(--secondary-dark);
+}
+
+/* Bordures */
+.border-primary {
+  border-color: var(--primary);
+}
+
+.border-primary-light {
+  border-color: var(--primary-light);
+}
+
+.border-primary-dark {
+  border-color: var(--primary-dark);
+}
+
+.border-secondary {
+  border-color: var(--secondary);
+}
+
+.border-secondary-light {
+  border-color: var(--secondary-light);
+}
+
+.border-secondary-dark {
+  border-color: var(--secondary-dark);
+}
+
+/* Arrière-plans de type hover */
+.bg-primary:hover {
+  background-color: var(--primary);
+}
+
+.bg-primary-light:hover {
+  background-color: var(--primary-light);
+}
+
+.bg-primary-dark:hover {
+  background-color: var(--primary-dark);
+}
+
+.bg-secondary:hover {
+  background-color: var(--secondary);
+}
+
+.bg-secondary-light:hover {
+  background-color: var(--secondary-light);
+}
+
+.bg-secondary-dark:hover {
+  background-color: var(--secondary-dark);
+}

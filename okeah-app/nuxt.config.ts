@@ -10,7 +10,7 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' }
   },
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/css/main.css', '@/assets/css/themes.css', '@fortawesome/fontawesome-free/css/all.css'],
   vite: {
     plugins: [
       tailwindcss(),
