@@ -9,6 +9,7 @@
                 <NuxtLink to="/">Accueil</NuxtLink>
                 <NuxtLink to="/blog">Blog</NuxtLink>
                 <ThemeSwitcher />
+                <LanguageSwitcher />
             </nav>
         </div>
     </header>
