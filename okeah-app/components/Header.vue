@@ -7,7 +7,8 @@
             <!-- Liens de navigation à droite -->
             <nav class="flex space-x-4 items-center text-primary">
                 <NuxtLink :to="`/${$i18n.locale}/`">{{ $t('home') }}</NuxtLink>
-                <NuxtLink :to="`/${$i18n.locale}/blog`">{{ $t('blog') }}</NuxtLink>
+                <NuxtLink :to="`/${$i18n.locale}/food-rate`">Food rate</NuxtLink>
+                <NuxtLink :to="`/${$i18n.locale}/blog`">Blog</NuxtLink>
                 <ThemeSwitcher />
                 <LanguageSwitcher />
             </nav>
