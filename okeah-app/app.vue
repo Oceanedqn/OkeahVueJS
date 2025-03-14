@@ -1,11 +1,9 @@
 <template>
-  <div class="flex flex-col min-h-screen">
+  <div>
     <NuxtLoadingIndicator />
     <NuxtRouteAnnouncer />
     <Header />
-    <div class="w-full max-w-6xl mx-auto mt-2 p-6 bg-white shadow-lg rounded-lg flex-grow">
-      <NuxtPage />
-    </div>
+    <NuxtPage />
   </div>
 </template>
 
