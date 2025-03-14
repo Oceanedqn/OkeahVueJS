@@ -13,7 +13,7 @@
                     <i class="fas fa-times cursor-pointer"></i>
                 </button>
 
-                <h2 class="text-lg font-bold mb-4 text-title-text">Choisir un thème</h2>
+                <h2 class="text-lg font-bold mb-4 text-title-text">{{ $t('choice_theme') }}</h2>
 
                 <!-- Liste des thèmes avec icônes -->
                 <div class="grid grid-cols-3 gap-4">
@@ -25,7 +25,8 @@
                 </div>
 
                 <button @click="closeModal"
-                    class="mt-4 p-2 rounded-full w-full bg-primary hover:bg-primary-light text-white cursor-pointer">Fermer</button>
+                    class="mt-4 p-2 rounded-full w-full bg-primary hover:bg-primary-light text-white cursor-pointer">{{
+                        $t('close') }}</button>
             </div>
         </div>
     </div>

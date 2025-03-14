@@ -64,12 +64,25 @@ const selectLanguage = (code) => {
 
     // Forcer la mise à jour de la vue avec nextTick après avoir changé la langue
     nextTick(() => {
-        // Mettre à jour l'URL avec la langue choisie
-        window.history.pushState(null, '', `/${code}${window.location.pathname.substring(3)}`)
-        window.location.reload()
-    })
+        // Récupérer le chemin sans le préfixe de la langue actuel
+        const path = window.location.pathname.replace(/^\/(fr|en)\//, '/');
 
-    closeModal()
+        // Créer la nouvelle URL en ajoutant la langue
+        let newUrl = `/${code}${path}`;
+
+        // S'assurer que l'URL se termine par "/"
+        if (!newUrl.endsWith('/')) {
+            newUrl += '/';
+        }
+
+        // Mettre à jour l'URL sans recharger la page
+        window.history.pushState(null, '', newUrl);
+
+        // Rafraîchir la page pour appliquer le changement de langue
+        window.location.reload();
+    });
+
+    closeModal();
 }
 
 // Charger la langue à partir du chemin de l'URL ou du localStorage
