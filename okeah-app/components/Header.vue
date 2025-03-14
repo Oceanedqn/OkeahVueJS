@@ -6,9 +6,10 @@
 
             <!-- Liens de navigation à droite -->
             <nav class="flex space-x-4 items-center text-primary">
-                <NuxtLink to="/">Accueil</NuxtLink>
-                <NuxtLink to="/blog">Blog</NuxtLink>
+                <NuxtLink :to="`/${$i18n.locale}/`">{{ $t('home') }}</NuxtLink>
+                <NuxtLink :to="`/${$i18n.locale}/blog`">{{ $t('blog') }}</NuxtLink>
                 <ThemeSwitcher />
+                <LanguageSwitcher />
             </nav>
         </div>
     </header>
