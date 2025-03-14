@@ -22,10 +22,10 @@ export default defineNuxtConfig({
   },
   modules: ['@nuxtjs/i18n'],
   i18n: {
-    vueI18n: './i18n.config',
     lazy: true,
     langDir: 'locales/',
     strategy: 'prefix_and_default',
+    defaultLocale: "fr",
     locales: [
       {
         code: 'fr',
@@ -40,6 +40,5 @@ export default defineNuxtConfig({
         file: 'en.json',
       },
     ],
-    defaultLocale: "fr",
   },
 })
